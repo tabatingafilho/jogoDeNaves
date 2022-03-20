@@ -1,9 +1,9 @@
 function start() { // Inicio da função start()
     $("#inicio").hide();
-    $("#fundoGame").append("<div id='jogador' class='anima1'></div>");
-    $("#fundoGame").append("<div id='inimigo1' class='anima2'></div>");
-    $("#fundoGame").append("<div id='inimigo2' class='anima4'></div>");
-    $("#fundoGame").append("<div id='amigo' class='anima3'></div>");
+    $("#fundoGame").append("<div id='jogador' class='jogador'></div>");
+    $("#fundoGame").append("<div id='inimigo1' class='helicopteroInimigo'></div>");
+    $("#fundoGame").append("<div id='inimigo2' class='caminhao'></div>");
+    $("#fundoGame").append("<div id='amigo' class='amigo'></div>");
     $("#fundoGame").append("<div id='placar'></div>");
     $("#fundoGame").append("<div id='energia'></div>");
 
@@ -112,6 +112,7 @@ function start() { // Inicio da função start()
         }
     } // Fim da função moveinimigo2()
 
+
     function moveamigo() {
 
         posicaoX = parseInt($("#amigo").css("left"));
@@ -165,7 +166,7 @@ function start() { // Inicio da função start()
         var colisao3 = ($("#disparo").collision($("#inimigo1")));
         var colisao4 = ($("#disparo").collision($("#inimigo2")));
         var colisao5 = ($("#jogador").collision($("#amigo")));
-        var colisao6 = ($("#inimigo2").collision($("#amigo")));
+        var colisao6 = ($("#amigo").collision($("#inimigo2")));
 
 
         var somDisparo = document.getElementById("somDisparo");
